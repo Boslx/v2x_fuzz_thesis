@@ -1,3 +1,6 @@
 [submodule "pycrate-asn1-fuzzer"]
 	path = pycrate-asn1-fuzzer
 	url = https://github.com/Boslx/pycrate-asn1-fuzzer.git
+[submodule "scapy-etsi-its"]
+	path = scapy-etsi-its
+	url = https://github.com/Boslx/scapy-etsi-its.git
