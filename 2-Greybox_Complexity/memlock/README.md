@@ -1,0 +1,1 @@
+This patch adds additional memory usage information to each interesting seed found. This info would otherwise only be available for crashes.

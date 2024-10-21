@@ -1,0 +1,30 @@
+Subject: [PATCH] Added mem info to every new input
+---
+Index: tool/MemLock/memlock-heap-fuzz.c
+===================================================================
+diff --git a/tool/MemLock/memlock-heap-fuzz.c b/tool/MemLock/memlock-heap-fuzz.c
+--- a/tool/MemLock/memlock-heap-fuzz.c	(revision d36c7b469c2790516cf7a80ad77b9d68c3070f06)
++++ b/tool/MemLock/memlock-heap-fuzz.c	(revision 5e6d6a5d26ed0043666330c7598988ac8ef1268e)
+@@ -3418,6 +3418,8 @@
+ 
+     sprintf(ret + strlen(ret), ",op:%s", stage_short);
+ 
++    sprintf(ret + strlen(ret), ",mem:%llu", sizeScore_cur);
++
+     if (stage_cur_byte >= 0) {
+ 
+       sprintf(ret + strlen(ret), ",pos:%u", stage_cur_byte);
+Index: tool/MemLock/memlock-stack-fuzz.c
+===================================================================
+diff --git a/tool/MemLock/memlock-stack-fuzz.c b/tool/MemLock/memlock-stack-fuzz.c
+--- a/tool/MemLock/memlock-stack-fuzz.c	(revision d36c7b469c2790516cf7a80ad77b9d68c3070f06)
++++ b/tool/MemLock/memlock-stack-fuzz.c	(revision 5e6d6a5d26ed0043666330c7598988ac8ef1268e)
+@@ -3424,6 +3424,8 @@
+ 
+     sprintf(ret + strlen(ret), ",op:%s", stage_short);
+ 
++    sprintf(ret + strlen(ret), ",mem:%llu", stackScore_cur);
++
+     if (stage_cur_byte >= 0) {
+ 
+       sprintf(ret + strlen(ret), ",pos:%u", stage_cur_byte);
