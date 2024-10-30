@@ -2,6 +2,9 @@
 
 Please note that for some scripts you have to edit the variables within the source code.  
 
+## plotAverageIntervalID3.py
+Reads two pcap files containing CAM messages and plots the time between CAM messages as a scatter plot. 
+
 ## plotAverageIntervalSocktap.py
 
 Reads pcap files containing CAM messages.
